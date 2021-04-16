@@ -18,7 +18,7 @@ any order.
 
 Do not change the signature of the apriori and alternative_miner methods as they will be called by the test script.
 
-__authors__ = "<???, Breno and Tiburcio>"
+__authors__ = "<Breno Tiburcio>"
 """
 import time
 import copy
