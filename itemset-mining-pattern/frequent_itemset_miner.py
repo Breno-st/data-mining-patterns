@@ -302,15 +302,20 @@ for db in datasets:
     vapri = elapses_vert_aprior[db].copy()
     eclat = elapses_eclat[db].copy()
 
+    rng=[0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6,0.55,0.5,0.45,0.4,0.35,0.3,0.25,0.2,0.15,0.1,0.05,0.02,0.01]
+
     plt.figure(count)
     #fig.suptitle('Run-time comparison')
-    plt.plot(rng[:len(apri)],ap,'-+',label='Apriori.')
-    plt.plot(rng[:len(vapri)],gr,'-^',label='Vert. Apriori.')
-    plt.plot(rng[:len(eclat)],uap,'->',label='Eclat')
+    plt.plot(rng[:len(apri)],apri,'-+',label='Apriori.')
+    plt.plot(rng[:len(vapri)],vapri,'-^',label='Vert. Apriori.')
+    plt.plot(rng[:len(eclat)],eclat,'->',label='Eclat')
     plt.title('Dataset: '+db)
     plt.xlabel('Minimum Threshold')
     plt.ylabel('Run-time in Sec.')
     plt.legend()
     plt.savefig(db+'-plot.png')
     count+=1
+
+
+
 
